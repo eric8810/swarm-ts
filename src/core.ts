@@ -1,4 +1,4 @@
-import { Configuration, OpenAI } from "openai";
+import { OpenAI } from "openai";
 import {
   Agent,
   AgentFunction,
@@ -96,9 +96,8 @@ export class Swarm {
       if (!functionMap.has(name)) {
         debugPrint(debug, `Tool ${name} not found in function map.`);
         partialResponse.messages.push({
-          role: "tool",
-          tool_call_id: toolCall.id,
-          tool_name: name,
+          role: "function",
+          name: name,
           content: `Error: Tool ${name} not found.`,
         });
         continue;
@@ -116,9 +115,8 @@ export class Swarm {
       const result = this.handleFunctionResult(rawResult, debug);
 
       partialResponse.messages.push({
-        role: "tool",
-        tool_call_id: toolCall.id,
-        tool_name: name,
+        role: "function",
+        name: name,
         content: result.value,
       });
 

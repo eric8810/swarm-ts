@@ -1,7 +1,4 @@
-import {
-  ChatCompletionMessage,
-  ChatCompletionMessageToolCall,
-} from "openai/resources";
+import { ChatCompletionMessageToolCall } from "openai/resources";
 
 export type AgentFunction = {
   (...args: any[]): string | Agent | Record<string, any>;
@@ -38,4 +35,14 @@ export class Result {
   }
 }
 
-export { ChatCompletionMessage, ChatCompletionMessageToolCall };
+export { ChatCompletionMessageToolCall };
+
+export interface ChatCompletionMessage {
+  role: "system" | "user" | "assistant" | "function";
+  content: string | null;
+  name?: string;
+  function_call?: {
+    name: string;
+    arguments: string;
+  };
+}

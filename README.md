@@ -14,13 +14,7 @@ A TypeScript implementation of Swarm, an educational framework exploring ergonom
 Requires Node.js 14+
 
 ```shell
-npm install git+ssh://git@github.com/openai/swarm-ts.git
-```
-
-or
-
-```shell
-npm install git+https://github.com/openai/swarm-ts.git
+npm install swarm-ts
 ```
 
 ## Usage

@@ -5,9 +5,17 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "tsc",
+    "build": "yarn tsc",
     "start": "node dist/index.js",
-    "test": "jest"
+    "test": "jest",
+    "prepublishOnly": "yarn build"
+  },
+  "keywords": ["swarm", "typescript", "ai", "agents"],
+  "author": "Your Name",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eric8810/swarm-ts.git"
   },
   "dependencies": {
     "openai": "^4.67.3"
