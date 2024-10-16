@@ -10,7 +10,12 @@
     "test": "jest",
     "prepublishOnly": "yarn build"
   },
-  "keywords": ["swarm", "typescript", "ai", "agents"],
+  "keywords": [
+    "swarm",
+    "typescript",
+    "ai",
+    "agents"
+  ],
   "author": "Your Name",
   "license": "MIT",
   "repository": {

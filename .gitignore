@@ -49,3 +49,6 @@ yarn.lock
 
 # Yarn Integrity file
 .yarn-integrity
+
+# NPM registry
+.npmrc
